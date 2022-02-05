@@ -32,3 +32,22 @@ let obj = {
     func:fn
 }
 obj.func();   //both this will give 'chaynika';
+
+//********************************************************************ARROW FUNCTION*************************************************** */
+
+
+function fn()
+{
+    console.log(`Hi I am ${this.person}`);
+    let abc = () =>{               //arrow function-> passes the this of above function
+        console.log(`Hi I am ${this.person}`);
+    }
+
+}
+
+let obj = {
+    person:'Chaynika',
+    func:fn
+}
+obj.func();   //both this will give 'chaynika';
+
