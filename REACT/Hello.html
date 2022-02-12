@@ -14,16 +14,34 @@
 </body>
 <script type="text/babel">
     //functional components
-    function Hello()
+    function Hello(person='Default')
     {
         return(
             //JSX Code
             <React.Fragment>
-                <h1>Hello</h1>
-                <h2>Hey</h2>
+                <h1>Hello{person}</h1>
+                <h2>Hey{person}</h2>
             </React.Fragment>   
         )
     }
-    ReactDOM.render(<Hello></Hello>,document.getElementById('root'));
+    //JSX RULES
+    //all these cant be included in return statement
+    //A For loop while loop & do while loop
+    //variable decalaration
+    //function declaration
+    //if else statments(use ternary instead)
+    //an object
+    function Hellos()  //reusability of code
+    {
+        return(
+            <React.Fragment>            
+                <Hello person='Chaynika'/>
+                <Hello person = 'Arora'/>
+                <Hello/>
+            </React.Fragment>   
+        )
+    }
+    ReactDOM.render(<Hellos></Hellos>,document.getElementById('root'));
 </script>
 </html>
+
